@@ -5,12 +5,15 @@ import org.springframework.stereotype.Component;
 import utn.tienda_libros.servicio.LibroServicio;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 @Component
 public class LibroForm extends JFrame {
     LibroServicio libroServicio;
     private JLabel panel;
+    private JTable tablaLibros;
+    private DefaultTableModel tablaModeloLibros;
 
     @Autowired
     public LibroForm(LibroServicio libroServicio){
@@ -29,6 +32,15 @@ public class LibroForm extends JFrame {
         int x = (tamanioPantalla.width - getWidth()/2);
         int y = (tamanioPantalla.height - getHeight()/2);
         setLocation(x, y);
+
+    }
+
+    private void createUIComponents() {
+        this.tablaModeloLibros = new DefaultTableModel(0, 5);
+        String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
+        this.tablaModeloLibros.setColumnIdentifiers(cabecera);
+        //Instanciar el objeto de JTable
+        this.tablaLibros = new JTable(tablaModeloLibros);
 
     }
 }

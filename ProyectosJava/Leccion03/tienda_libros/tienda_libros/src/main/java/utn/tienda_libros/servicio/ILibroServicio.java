@@ -4,10 +4,11 @@ import utn.tienda_libros.modelo.Libro;
 
 public interface ILibroServicio {
 
-    public List<Libro> listarLibros();
+    public list<Libro> listarLibros();
 
     public Libro buscarLibroPorId(Integer idLibro);
 
-    public void guardarLibro (Libro libro);
+    public void guardarLibro(Libro libro);
 
-    public void eliminarLibro (Libro libro)
+    public void eliminarLibro(Libro libro);
+}
