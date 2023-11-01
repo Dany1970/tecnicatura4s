@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import utn.tienda_libros.modelo.Libro;
 import utn.tienda_libros.repositorio.LibroRepositorio;
 
+import java.util.List;
+
 @Service
 public class LibroServicio implements ILibroServicio{
 
