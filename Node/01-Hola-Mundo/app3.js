@@ -1,14 +1,14 @@
-console.log('Inicio del programa');
+console.log('Inicio del programa');//1
 setTimeout(() => {
-    console.log('Primer Timeout');
+    console.log('Primer Timeout');//5
 }, 3000);
 
 setTimeout(() => {
-    console.log('Segundo Timeout');
+    console.log('Segundo Timeout');//4
 }, 0);
 
 setTimeout(() => {
-    console.log('Tercero Timeout');
+    console.log('Tercero Timeout');//3
 }, 0);
 
-console.log('Fin del programa');
+console.log('Fin del programa');//2
